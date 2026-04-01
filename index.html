@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Acadêmico - SENAI</title>
+    <meta name="description" content="Dashboard interativo para o cronograma de Lógica de Programação">
+
+    <!-- Modern Fonts: Outfit for UI, Fira Code for DEV touches -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <img src="assets/img/SENAI_logo_2024.png" alt="Logo SENAI" class="logo-img">
+                <span class="logo-text">DESENVOLVIMENTO DE SISTEMAS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#cronograma" class="nav-link">Cronograma de Aulas</a>
+            </nav>
+            <button class="nav-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (DOBRA 1) -->
+        <section id="inicio" class="hero-section">
+            <video autoplay loop muted playsinline class="hero-video-bg">
+                <source src="assets/media/video programação.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <div class="badge neon-blue animate-hero delay-1">&lt;Turma 2026/1&gt;</div>
+                <h1 class="hero-title animate-hero delay-2"><span class="gradient-text-white">CRONOGRAMA</span> <br><span class="gradient-text-blue">ACADÊMICO</span></h1>
+                <p class="hero-subtitle animate-hero delay-3">FIQUEM ATENTOS AO CRONOGRAMA DE AULAS E ATIVIDADES DO CURSO DESENVOLVIMENTO DE
+                    SISTEMAS.</p>
+
+                <div class="hero-buttons animate-hero delay-4">
+                    <a href="#cronograma" class="btn btn-primary glow-blue">Ver Aulas <i class="icon-arrow">↓</i></a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- CRONOGRAMA DE AULAS (DOBRA 2) -->
+        <section id="cronograma" class="content-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2>Cronograma de <span class="highlight-blue">Aulas</span></h2>
+                    <p>Acompanhe os dias de aula e o roteiro do professor.</p>
+
+                    <div class="legend-container">
+                        <div class="legend-item"><span class="dot dot-blue"></span> Aulas</div>
+                        <div class="legend-item"><span class="dot dot-yellow"></span> Intervalos / Pausas</div>
+                        <div class="legend-item" style="opacity: 0.7;"><span class="dot"
+                                style="background-color: #e5e7eb;"></span> Sem Aula</div>
+                    </div>
+                </header>
+
+                <!-- Novo Layout Bento-Timeline -->
+                <div class="bento-calendar-container">
+                    
+                    <!-- Painel Lateral (Sticky) -->
+                    <aside class="month-navigator glass-panel-sm">
+                        <div class="month-nav-header">
+                            <h3>Semestre</h3>
+                            <span class="badge-mini">2026/1</span>
+                        </div>
+                        <div class="tabs-vertical">
+                            <button class="tab-btn active" onclick="openMonth(event, 'abril')">Abril</button>
+                            <button class="tab-btn" onclick="openMonth(event, 'maio')">Maio</button>
+                            <button class="tab-btn" onclick="openMonth(event, 'junho')">Junho</button>
+                            <button class="tab-btn" onclick="openMonth(event, 'julho')">Julho</button>
+                        </div>
+                        <div class="nav-illustration">
+                            <div class="pulse-dot"></div>
+                            <span>Aulas Ao Vivo Hoje</span>
+                        </div>
+                    </aside>
+
+                    <!-- Feed da Timeline -->
+                    <div class="timeline-feed hide-empty-days">
+
+                        <!-- TIMELINE TOOLBAR (FILTRO DE VISIBILIDADE) -->
+                        <div class="timeline-toolbar">
+                            <span class="toolbar-label">Visualização do Mês:</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-empty-days" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="toolbar-status">Apenas Dias de Aula</span>
+                        </div>
+                        
+<div id="abril" class="tab-content" style="display: block; opacity: 1; transform: translateY(0);">
+<div class="month-title-modern">Abril / 2026</div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">01</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">02</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">03</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">04</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">05</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">06</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">07</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">08</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">09</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">10</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">11</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">09:00 - 12:00</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">12</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">13</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">14</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">15</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">16</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">17</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">18</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">19</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">20</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">21</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Feriado Escolar</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">22</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">23</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">24</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">25</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">26</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">27</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">28</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">29</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">30</span>
+         <span class="month">ABR</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+</div>
+<div id="maio" class="tab-content" style="display: none; opacity: 0; transform: translateY(20px);">
+<div class="month-title-modern">Maio / 2026</div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">01</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Feriado Escolar</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">02</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">03</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">04</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">05</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">06</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">07</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">08</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">09</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">09:00 - 12:00</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">10</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">11</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">12</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">13</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">14</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">15</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">16</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">17</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">18</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">19</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">20</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">21</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">22</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">23</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">24</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">25</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">26</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">27</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">28</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">29</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">30</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">09:00 - 12:00</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">31</span>
+         <span class="month">MAI</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+</div>
+<div id="junho" class="tab-content" style="display: none; opacity: 0; transform: translateY(20px);">
+<div class="month-title-modern">Junho / 2026</div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">01</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">02</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">03</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">04</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">05</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">06</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">07</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">08</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">09</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">10</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">11</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">12</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">13</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">14</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">15</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">16</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">17</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">18</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">19</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">20</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">21</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">22</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">23</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">24</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">25</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-yellow hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Criatividade e Ideação | CIP18</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">26</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">27</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">28</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">29</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">30</span>
+         <span class="month">JUN</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+</div>
+<div id="julho" class="tab-content" style="display: none; opacity: 0; transform: translateY(20px);">
+<div class="month-title-modern">Julho / 2026</div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">01</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">02</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">03</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">04</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">05</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">06</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">07</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">08</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-blue hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Lógica de Programação | LP162</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">09</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up">
+      <div class="bento-date">
+         <span class="day">10</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item glow-purple hover-track">
+             <div class="class-time">18:40 - 21:40</div>
+             <div class="class-name">Fund. de Eletroeletrônica | FEA80</div>
+             <div class="class-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">11</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">12</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">13</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">14</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">15</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">16</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">17</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">18</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">19</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">20</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">21</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">22</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">23</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">24</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">25</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sábado</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">26</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Domingo</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas - Final de Semana</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">27</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Segunda-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">28</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Terça-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">29</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quarta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">30</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Quinta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+  <div class="bento-card fade-up empty-day">
+      <div class="bento-date">
+         <span class="day">31</span>
+         <span class="month">JUL</span>
+         <span class="weekday">Sexta-feira</span>
+      </div>
+      <div class="bento-classes">
+         <div class="class-item empty hover-track">
+             <span>Sem Aulas Programadas</span>
+         </div>
+      </div>
+  </div>
+</div>
+
+                </div>
+                </div>
+
+                <script>
+                    function openMonth(evt, monthId) {
+                        const tabcontents = document.getElementsByClassName("tab-content");
+                        for (let i = 0; i < tabcontents.length; i++) {
+                            tabcontents[i].style.display = "none";
+                            tabcontents[i].style.opacity = "0";
+                            tabcontents[i].style.transform = "translateY(20px)";
+                        }
+                        
+                        const tablinks = document.getElementsByClassName("tab-btn");
+                        for (let i = 0; i < tablinks.length; i++) {
+                            tablinks[i].classList.remove("active");
+                        }
+                        
+                        const activeTab = document.getElementById(monthId);
+                        activeTab.style.display = "block";
+                        
+                        // Force reflow for transition
+                        void activeTab.offsetWidth;
+                        activeTab.style.transition = "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)";
+                        activeTab.style.opacity = "1";
+                        activeTab.style.transform = "translateY(0)";
+                        
+                        evt.currentTarget.classList.add("active");
+                    }
+                    
+                    // Simple Intersection Observer for Fade-ups & Mouse Hover Effect
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const cards = document.querySelectorAll('.fade-up');
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                }
+                            });
+                        }, { threshold: 0.1 });
+                        
+                        cards.forEach(card => observer.observe(card));
+
+                        // Toggle Logic
+                        const toggleEmpty = document.getElementById("toggle-empty-days");
+                        const timelineFeed = document.querySelector(".timeline-feed");
+                        const toolbarStatus = document.querySelector(".toolbar-status");
+                        
+                        if(toggleEmpty) {
+                            toggleEmpty.addEventListener("change", (e) => {
+                                if(e.target.checked) {
+                                    timelineFeed.classList.add("hide-empty-days");
+                                    toolbarStatus.innerText = "Apenas Dias de Aula";
+                                } else {
+                                    timelineFeed.classList.remove("hide-empty-days");
+                                    toolbarStatus.innerText = "Mês Completo (Mostrar todos os dias)";
+                                }
+                            });
+                        }
+    
+                        
+                        // Hover track implementation
+                        const hovers = document.querySelectorAll('.hover-track');
+                        hovers.forEach(el => {
+                            el.addEventListener('mousemove', (e) => {
+                                const rect = el.getBoundingClientRect();
+                                const x = e.clientX - rect.left;
+                                const y = e.clientY - rect.top;
+                                el.style.setProperty('--x', `${x}px`);
+                                el.style.setProperty('--y', `${y}px`);
+                            });
+                        });
+                    });
+                </script>
+                <div class="course-info-tables">
+                    <h3 class="month-title-modern" style="margin-top: 50px; margin-bottom: 25px; font-size: 2rem;">Informações das Disciplinas</h3>
+                    
+                    <div class="info-card-grid">
+                        <!-- LP162 -->
+                        <div class="course-card glass-panel-sm hover-track" style="border-left: 4px solid var(--neon-blue);">
+                            <div class="card-badge glow-blue">LP162</div>
+                            <h4 class="card-course-title highlight-blue">Lógica de Programação</h4>
+                            <div class="card-prof"><i class="icon-user"></i> Prof. Cristiana Pereira Bispo</div>
+                            
+                            <div class="card-footer-pills">
+                                <span class="pill"><i class="icon-clock"></i> 162h</span>
+                                <span class="pill"><i class="icon-calendar"></i> 03/02 a 08/07/2026</span>
+                                <span class="pill"><i class="icon-map"></i> B 8 (Lab.)</span>
+                            </div>
+                        </div>
+
+                        <!-- FEA80 -->
+                        <div class="course-card glass-panel-sm hover-track" style="border-left: 4px solid var(--neon-purple);">
+                            <div class="card-badge glow-purple">FEA80</div>
+                            <h4 class="card-course-title highlight-purple">Fund. de Eletroeletrônica</h4>
+                            <div class="card-prof"><i class="icon-user"></i> Prof. Jorge Luiz dos Santos</div>
+                            
+                            <div class="card-footer-pills">
+                                <span class="pill"><i class="icon-clock"></i> 80h</span>
+                                <span class="pill"><i class="icon-calendar"></i> 06/02 a 10/07/2026</span>
+                                <span class="pill"><i class="icon-map"></i> B 8 (Lab.)</span>
+                            </div>
+                        </div>
+
+                        <!-- CIP18 -->
+                        <div class="course-card glass-panel-sm hover-track" style="border-left: 4px solid var(--neon-yellow);">
+                            <div class="card-badge glow-yellow">CIP18</div>
+                            <h4 class="card-course-title highlight-yellow">Criatividade e ideação</h4>
+                            <div class="card-prof"><i class="icon-user"></i> Prof. Fellipe Bina Barros</div>
+                            
+                            <div class="card-footer-pills">
+                                <span class="pill"><i class="icon-clock"></i> 18h</span>
+                                <span class="pill"><i class="icon-calendar"></i> 06/03 a 25/06/2026</span>
+                                <span class="pill"><i class="icon-map"></i> B 8 (Lab.)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="month-title-modern" style="margin-top: 50px; margin-bottom: 25px; font-size: 2rem;">Atividades Especiais</h3>
+                    
+                    <div class="info-card-grid">
+                        <!-- AI -->
+                        <div class="course-card glass-panel-sm hover-track" style="border-left: 4px solid var(--text-secondary);">
+                            <div class="card-badge" style="border-color: var(--text-secondary); color: var(--text-secondary);">AI</div>
+                            <h4 class="card-course-title" style="color: var(--text-primary);">Aula Inaugural</h4>
+                            <div class="card-prof"><i class="icon-star"></i> Evento Especial</div>
+                            
+                            <div class="card-footer-pills">
+                                <span class="pill"><i class="icon-calendar"></i> 02/02/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER DEVELOPMENT CREDITS -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p class="footer-rights">TODOS OS DIREITOS RESERVADOS &copy; 2026</p>
+            <p class="footer-credits">PABLO BEHRENS <span class="highlight-blue">&bull;</span> ALUNO DO CURSO DE DESENVOLVIMENTO DE SISTEMAS SENAI</p>
+        </div>
+    </footer>
+</body>
+
+</html>
